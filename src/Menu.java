@@ -1,5 +1,3 @@
-package src;
-
 import src.Utils.utils;
 
 import java.util.Scanner;
