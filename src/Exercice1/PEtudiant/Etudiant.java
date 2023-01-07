@@ -64,4 +64,10 @@ public class Etudiant {
         notes.get(sujet).put(type, note);
     }
 
+    public void setNote(String sujet, String type, double note, double coefficient) {
+        if (!notes.containsKey(sujet)) {
+            notes.put(sujet, new HashMap<>());
+        }
+        notes.get(sujet).put(type, note * coefficient / coefficient);
+    }
 }
