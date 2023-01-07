@@ -3,11 +3,9 @@ package Exercice1.PClasse;
 
 import Exercice1.PEtudiant.Etudiant;
 
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 public class Classe {
     private final String nom;
@@ -52,4 +50,28 @@ public class Classe {
         eleves.put(nom_prenom, eleve);
     }
 
+    public void saveInFiles (String listeEtudiant) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(listeEtudiant));
+        for (Etudiant etudiant : eleves.values()) {
+            writer.write(etudiant.nom + " " + etudiant.prenom);
+            writer.newLine();
+        }
+        writer.close();
+    }
+
+    public void readFromFile(String fileName) {
+        System.out.println("Lecture du fichier " + fileName);
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Le fichier n'a pas été trouvé");
+        } catch (IOException e) {
+            System.out.println("Une erreur d'entrée/sortie s'est produite");
+        }
+    }
 }
