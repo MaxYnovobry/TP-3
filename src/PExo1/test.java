@@ -1,7 +1,4 @@
-package Exercice1;
-
-import Exercice1.PClasse.Classe;
-import Exercice1.PEtudiant.Etudiant;
+package PExo1;
 
 import java.io.IOException;
 

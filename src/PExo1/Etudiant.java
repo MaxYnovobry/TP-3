@@ -1,8 +1,6 @@
-package Exercice1.PEtudiant;
+package PExo1;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Etudiant {
