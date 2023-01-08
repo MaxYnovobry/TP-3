@@ -55,7 +55,32 @@ public class partie2 extends JFrame {
             buttonOk1.addActionListener(e1 -> frame.dispose());
 
         });
-        JButton buttonCancel = new JButton("Annuler");
+        JButton buttonCancel = new JButton("Cancel");
+
+        buttonCancel.addActionListener(e -> {
+            String name = textFieldName.getText();
+            char[] password = passwordField.getPassword();
+
+            JFrame frame = new JFrame("Nouvelle fenêtre");
+            frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
+            frame.setSize(300, 140);
+            frame.setVisible(true);
+            JLabel labelarea = new JLabel("Vous avez appuyez sur : Cancel ");
+            labelarea.setAlignmentX(Component.CENTER_ALIGNMENT);
+            JLabel labelName1 = new JLabel("Nom : " + name);
+            labelName1.setAlignmentX(Component.CENTER_ALIGNMENT);
+            JLabel labelPassword1 = new JLabel("Mot de passe : " + new String(password));
+            labelPassword1.setAlignmentX(Component.CENTER_ALIGNMENT);
+            JButton buttonOk1 = new JButton("Ok");
+            buttonOk1.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+            frame.add(labelarea);
+            frame.add(labelName1);
+            frame.add(labelPassword1);
+            frame.add(buttonOk1);
+            buttonOk1.addActionListener(e1 -> frame.dispose());
+
+        });
 
         buttonPanel.add(buttonOk);
         buttonPanel.add(Box.createHorizontalGlue());
