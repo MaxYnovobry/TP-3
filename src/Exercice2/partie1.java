@@ -1,6 +1,7 @@
 package Exercice2;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,23 +32,22 @@ public class partie1 {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         JFrame newFrame = new JFrame("Action Bouton 1");
-                        newFrame.setLayout(new BoxLayout(newFrame.getContentPane(), BoxLayout.Y_AXIS));
+                        newFrame.setLayout(new BorderLayout());
                         newFrame.setSize(300, 100);
 
+                        // Création d'un label avec le texte souhaité
+                        JLabel label = new JLabel("Je suis un bouton simple", JLabel.CENTER);
+                        newFrame.add(label, BorderLayout.NORTH);
 
-                    // Création d'un label avec le texte souhaité
-                    JLabel label = new JLabel("Je suis un bouton simple", JLabel.CENTER);
-                    newFrame.add(label);
+                        // Création d'un bouton pour fermer la fenêtre
+                        JButton btnFermer = new JButton("OK");
+                        newFrame.add(btnFermer, BorderLayout.SOUTH);
+                        btnFermer.addActionListener(c -> {
+                            newFrame.dispose();
+                        });
 
-                    // Création d'un bouton pour fermer la fenêtre
-                    JButton btnFermer = new JButton("OK");
-                    newFrame.add(btnFermer);
-                    btnFermer.addActionListener(c -> {
-                        newFrame.dispose();
-                    });
-
-                    // Afficher le nouveau frame
-                    newFrame.setVisible(true);
+                        // Afficher le nouveau frame
+                        newFrame.setVisible(true);
                 }
         });
 
@@ -57,17 +57,17 @@ public class partie1 {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         JFrame newFrame = new JFrame("Action Bouton 2");
-                        newFrame.setLayout(new FlowLayout());
+                        newFrame.setLayout(new BorderLayout());
                         newFrame.setSize(300, 100);
 
 
                         // Création d'un label avec le texte souhaité
                         JLabel label = new JLabel("Je suis un bouton fantaisie", JLabel.CENTER);
-                        newFrame.add(label);
+                        newFrame.add(label, BorderLayout.NORTH);
 
                         // Création d'un bouton pour fermer la fenêtre
                         JButton btnFermer = new JButton("OK");
-                        newFrame.add(btnFermer);
+                        newFrame.add(btnFermer, BorderLayout.SOUTH);
                         btnFermer.addActionListener(c -> {
                             newFrame.dispose();
                         });
