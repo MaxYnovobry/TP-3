@@ -4,8 +4,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class BoxLayoutExample extends JFrame {
-    public BoxLayoutExample() {
+public class partie2 extends JFrame {
+    public partie2() {
         super("BoxLayout Example");
 
         JPanel panel = new JPanel();
@@ -77,6 +77,6 @@ public class BoxLayoutExample extends JFrame {
     }
 
     public static void main(String[] args) {
-        new BoxLayoutExample();
+        new partie2();
     }
 }
