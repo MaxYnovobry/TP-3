@@ -1,5 +1,4 @@
-import Exercice1.test;
-import Exercice2.partie1;
+import PExo2.partie1;
 
 import java.io.IOException;
 

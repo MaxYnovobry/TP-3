@@ -1,7 +1,5 @@
-package Exercice1.PClasse;
+package PExo1;
 
-
-import Exercice1.PEtudiant.Etudiant;
 
 import java.io.*;
 import java.util.HashMap;
