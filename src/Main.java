@@ -1,5 +1,5 @@
-import Exercice1.test;
-import Exercice2.partie1;
+import PExo1.test;
+import PExo2.partie1;
 import Exercice2.Selecteurcartes;
 
 import java.io.IOException;

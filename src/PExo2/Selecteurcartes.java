@@ -1,4 +1,4 @@
-package Exercice2;
+package PExo2;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
