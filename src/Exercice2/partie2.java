@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class partie2 extends JFrame {
     public partie2() {
-        super("BoxLayout Example");
+        super("BoxLayout");
 
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
