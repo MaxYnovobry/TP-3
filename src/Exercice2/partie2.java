@@ -53,12 +53,7 @@ public class partie2 extends JFrame {
             frame.add(labelName1);
             frame.add(labelPassword1);
             frame.add(buttonOk1);
-            buttonOk1.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    frame.dispose();
-                }
-            });
+            buttonOk1.addActionListener(e1 -> frame.dispose());
 
         });
         JButton buttonCancel = new JButton("Annuler");
